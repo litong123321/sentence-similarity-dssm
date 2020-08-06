@@ -6,8 +6,10 @@
 调研以后发现有2种模型我们可以拿来和TinyBERT融合：
 （1）Sentence-BERT，属于孪生网络和BERT的结合，训练时做2分类任务，预测时可以获得query的语义向量
 https://github.com/UKPLab/sentence-transformers
+
 （2）DSSM/CNN-DSSM/LSTM-DSSM，按字输入、用多个隐藏层来捕获特征，也是经典的匹配模型
 https://www.cnblogs.com/guoyaohua/p/9229190.html
+
 2、检索优化
 之前线上用的检索模型是基于树的annoy，可以改成基于图结构的HNSW算法，之前和一凡实验过，内存消耗、预测速度都要优于annoy
 https://github.com/nmslib/hnswlib
